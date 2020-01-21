@@ -2,7 +2,8 @@
 #include<stdlib.h>
 #include<ctype.h>
 
-int main (int argc, char *argv[]) {
+int main (int argc, char *argv[])
+{
  int rows, coef=1, space, i, j;
  if(atoi(argv[1])>=atoi(argv[2])) {
    if(isdigit(*argv[1])) {
@@ -25,15 +26,15 @@ int main (int argc, char *argv[]) {
     for(i=(rows-1); i<rows; i++) {
      for (space=1; space <= rows-i; space++) {
            printf("  ");
-      }     
+      }
       for (j=0; j<=i; j++) {
        if (j==0 || i==0) {
           coef = 1;
-       }   
+       }
          else {
              coef=coef*(i-j+1)/j;
              printf("%4d", coef);
-         }    
+         }
      }
      printf("\n");
   }
@@ -45,12 +46,12 @@ int main (int argc, char *argv[]) {
         for (j=(atoi(argv[2]+3)); j<atoi(argv[2]); j++) {
           if (j==0 || i==0) {
               coef = 1;
-          }   
+          }
           else {
               coef=coef*(i-j+1)/j;
           }
         }
-      coef = abs(coef);  
+      coef = abs(coef);
       printf("\nIn row %d, the value you seek is %d.", rows, coef);
       printf("\n");
      }
